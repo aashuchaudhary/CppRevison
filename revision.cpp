@@ -164,7 +164,7 @@ using namespace std;
     cout<< "Maximum value is : "<<ans<<endl;
  } */
 
-// SORTING AN ARRAY
+// SELECTION SORTING AN ARRAY
 
 /* #include<bits/stdc++.h>
 using namespace std;
@@ -189,8 +189,60 @@ int main() {
     }
 
     return 0;
-}
- */
+} */
+
+
+// OR
+
+/* #include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int arr[6] = {10, 4, 1, 3, 2, 7};
+    int temp;
+    // Selection sort algorithm
+    for (int i = 0; i < 5; i++) {
+        
+        for (int j = 0; j < 5-i-1; j++) 
+        {
+          if(arr[j] > arr[j+1]){
+        // Swap the found minimum element with the element at index 'i'
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+
+    // Output the sorted array
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+} */
+
+//OR
+
+/* #include<iostream>
+using namespace std;
+int main(){
+    int arr[5] = {10, 4, 1, 3, 2};
+    int temp;
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5 - i - 1; j++){
+            if(arr[j] > arr[j+1]){
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    for(int i = 0; i < 5; i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+} */
 
 // Bubble sort array
 
